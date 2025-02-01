@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Подключение шрифта */
+@font-face {
+    font-family: 'MyCustomFont'; /* Название шрифта */
+    src: url('assets/front/fontnametag.ttf') format('truetype'); /* Путь к файлу шрифта */
+    font-weight: normal;
+    font-style: normal;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Логотип слева, меню справа */
+    align-items: center;
+    background: #2c3e50;
+    color: white;
+    padding: 15px 5%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1px; /* Уменьшено расстояние между логотипом и текстом */
+}
+
+.logo img {
+    height: 150px;
+    width: auto;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Сдвигаем текст вниз */
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'MyCustomFont', sans-serif; /* Применяем подключённый шрифт */
+    color: black; /* Делаем текст чёрным */
+    letter-spacing: 2px; /* Увеличиваем расстояние между буквами */
+    line-height: 1; /* Уменьшаем расстояние между строками */
+    padding-top: 15px; /* Поднимаем текст */
+}
+
+nav ul {
+    display: flex;
+    gap: 30px; /* Увеличено расстояние между элементами */
+    list-style-type: none; /* Убираем маркеры */
+    padding: 0; /* Убираем отступы */
+}
+
+nav li {
+    display: inline-block; /* Элементы списка будут располагаться в строку */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+nav a img {
+    margin-right: 8px; /* Отступ между изображением и текстом */
+    width: 35px; /* Задай размер изображения */
+    height: 35px;
+}
