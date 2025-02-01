@@ -11,6 +11,14 @@ body {
     overflow-x: hidden; /* Убираем горизонтальную прокрутку */
 }
 
+
+@font-face {
+    font-family: 'MyCustomFont'; /* Название шрифта */
+    src: url('assets/front/fontnametag.ttf') format('truetype'); /* Путь к файлу шрифта */
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Шапка */
 header {
     display: flex;
@@ -36,12 +44,18 @@ header {
 }
 
 .logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Сдвигаем текст вниз */
     font-size: 35px;
     font-weight: bold;
-    color: black;
-    letter-spacing: 2px;
-    line-height: 1;
+    font-family: 'MyCustomFont', sans-serif; /* Применяем подключённый шрифт */
+    color: black; /* Делаем текст чёрным */
+    letter-spacing: 2px; /* Увеличиваем расстояние между буквами */
+    line-height: 1; /* Уменьшаем расстояние между строками */
+    padding-top: 15px; /* Поднимаем текст */
 }
+
 
 nav ul {
     display: flex;
