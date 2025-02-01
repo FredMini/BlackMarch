@@ -20,8 +20,8 @@ header {
     display: flex;
     justify-content: space-between; /* Логотип слева, меню справа */
     align-items: center;
-    background: #333;
-    color: white;
+    background:#e0e0e0;
+    color: #000;
     padding: 15px 5%;
 }
 
@@ -61,7 +61,7 @@ nav li {
 }
 
 nav a {
-    color: white;
+    color: #000;
     text-decoration: none;
     font-size: 20px;
     display: flex;
@@ -69,7 +69,27 @@ nav a {
 }
 
 nav a img {
-    margin-right: 8px; /* Отступ между изображением и текстом */
+    margin-right: 4px; /* Отступ между изображением и текстом */
     width: 35px; /* Задай размер изображения */
     height: 35px;
+}
+
+footer {
+    position: fixed; /* Закрепляем плашку внизу страницы */
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Ширина на всю страницу */
+    background-color: #e0e0e0; /* Темный фон */
+    color: #000; /* Белый текст */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: left; /* Центрируем контент */
+    align-items: left;
+}
+
+.footer-content {
+    max-width: 900px; /* Ограничиваем максимальную ширину */
+    width: 100%; /* Пропорциональная ширина */
+    text-align: left; /* Центрируем текст */
+    font-size: 16px; /* Размер шрифта */
 }

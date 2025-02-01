@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="by">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформления заявления</title>
+    <link rel="stylesheet" href="qstyles.css">
+    <link rel="icon" href="icon/android-chrome-512x512.png" type="image/png">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <a href="index.html"><img src="assets/logo.png" alt="BLACKMARCH" width="550" height="550"></a>
+        <table>
+            <tr>
+                <td><div class="logo-text">BLACKMARCH INC.</div></td>
+            </tr>
+            <tr>
+                <td><a>Подача заявления</a></td>
+            </tr>
+        </table>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#"><img src="assets/media-icon.png" width="35" height="35" alt="News" /> Новости</a></li>
+            <li><a href="#"><img src="assets/npa-icon.png" width="35" height="35" alt="NPA" /> НПА</a></li>
+        </ul>
+    </nav>
+  </header>
+
+<!-- Подключаем библиотеку EmailJS -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+<!-- Скрипт для обработки формы -->
+<script>
+    emailjs.init("ZKK0IniH2ruT811OE"); // Замени на свой user ID
+
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Предотвращаем стандартную отправку формы
+
+        emailjs.sendForm('service_n3dl8kn', 'template_2az42ai', this)
+            .then(function(response) {
+                console.log('Success:', response);
+                alert('Заявка отправлена!');
+            }, function(error) {
+                console.log('Error:', error);
+                alert('Ошибка при отправке заявки.');
+            });
+    });
+</script>
+
+<main>
+    <section>
+        <h2>Заполните форму для подачу заявления</h2>
+        <form id="contact-form">
+            <table>
+                <tr>
+                    <td><input type="text" id="name" name="name" placeholder="Ваш никнейм в игре" required /></td>
+                    <td><input type="email" id="email" name="email" placeholder="Ваш e-mail" required /></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><textarea id="message" name="message" placeholder="Заявление" required></textarea></td>
+                </tr>
+            </table>
+            <button type="submit">Отправить заявление</button>
+        </form>
+    </section>
+    <h1>Форма заполнения...</h1>
+    <div>
+        <table>
+            <tr>
+                <td>1. Ваш дискорд;</td>
+            </tr>
+            <tr>
+                <td>2. Суть нарушения (напомню, вас ознамиться с НПА, чтобы понять что в нашей юрисдикции);</td>
+            </tr>
+            <tr>
+                <td>3. Доказательства нарушения.</td>
+            </tr>
+        </table>
+    </div>
+</main>
+
+</body>
+</html>
