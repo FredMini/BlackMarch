@@ -20,7 +20,7 @@ header {
     display: flex;
     justify-content: space-between; /* Логотип слева, меню справа */
     align-items: center;
-    background: #2c3e50;
+    background: #333;
     color: white;
     padding: 15px 5%;
 }
