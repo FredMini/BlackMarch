@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Оформления заявления</title>
+    <title>Как с нами связаться?</title>
     <link rel="stylesheet" href="qstyles.css">
     <link rel="icon" href="icon/android-chrome-512x512.png" type="image/png">
 </head>
@@ -17,7 +17,7 @@
                 <td><div class="logo-text">BLACKMARCH INC.</div></td>
             </tr>
             <tr>
-                <td><a>Подача заявления</a></td>
+                <td><a>Гайд-страница</a></td>
             </tr>
         </table>
     </div>
@@ -29,48 +29,17 @@
     </nav>
   </header>
 
-<!-- Подключаем библиотеку EmailJS -->
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-
-<!-- Скрипт для обработки формы -->
-<script>
-    emailjs.init("ZKK0IniH2ruT811OE"); // Замени на свой user ID
-
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Предотвращаем стандартную отправку формы
-
-        emailjs.sendForm('service_n3dl8kn', 'template_2az42ai', this)
-            .then(function(response) {
-                console.log('Success:', response);
-                alert('Заявка отправлена!');
-            }, function(error) {
-                console.log('Error:', error);
-                alert('Ошибка при отправке заявки.');
-            });
-    });
-</script>
-
 <main>
-    <section>
-        <h2>Заполните форму для подачу заявления</h2>
-        <form id="contact-form">
-            <table>
-                <tr>
-                    <td><input type="text" id="name" name="name" placeholder="Ваш никнейм в игре" required /></td>
-                    <td><input type="email" id="email" name="email" placeholder="Ваш e-mail" required /></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><textarea id="message" name="message" placeholder="Заявление" required></textarea></td>
-                </tr>
-            </table>
-            <button type="submit">Отправить заявление</button>
-        </form>
-    </section>
-    <h1>Форма заполнения...</h1>
+    <h1>Q: Как правильно оформить донос?</h1>
     <div>
+    <h2>
+    A: Для оформления доноса сообщения отправляют в дискорд канал Чёрного марта, исключительно созданием тикета для обеспечения анонимности и защиты прав каждого гражданина
         <table>
             <tr>
-                <td>1. Ваш дискорд;</td>
+                <td>Форма доноса:</td>
+            </tr>
+            <tr>
+                <td>1. Ваш игровой ник;</td>
             </tr>
             <tr>
                 <td>2. Суть нарушения (напомню, вас ознамиться с НПА, чтобы понять что в нашей юрисдикции);</td>
@@ -79,6 +48,30 @@
                 <td>3. Доказательства нарушения.</td>
             </tr>
         </table>
+    </h2>
+    </div>
+    <h1>Q: Как стать информатором Чёрного марта?</h1>
+    <div>
+    <h2>
+    A: Чтобы стать информатором необходимо подать заявку в офицальный дискорд-канал Чёрного Марта, так же через тикет для обеспечения.
+        <table>
+            <tr>
+                <td>Форма заявки:</td>
+            </tr>
+            <tr>
+                <td>1. Ваш игровой ник;</td>
+            </tr>
+            <tr>
+                <td>2. Почему вы хотите стать информатором;</td>
+            </tr>
+            <tr>
+                <td>3. Ваш средний онлайн.</td>
+            </tr>
+            <tr>
+                <td>p.s.Все условия с каждым информатором обговариваются в индивидуальной форме.</td>
+            </tr>
+        </table>
+    </h2>
     </div>
 </main>
 
