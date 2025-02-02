@@ -10,7 +10,7 @@ body {
 
 /* Подключение шрифта */
 @font-face {
-    font-family: 'MyCustomFont'; /* Название шрифта */
+    font-family: 'txtlogo'; /* Название шрифта */
     src: url('assets/front/fontnametag.ttf') format('truetype'); /* Путь к файлу шрифта */
     font-weight: normal;
     font-style: normal;
@@ -35,7 +35,7 @@ header {
 .logo {
     display: flex;
     align-items: center;
-    gap: 1px; /* Уменьшено расстояние между логотипом и текстом */
+    position: relative;
 }
 
 .logo img {
@@ -49,7 +49,7 @@ header {
     justify-content: flex-end; /* Сдвигаем текст вниз */
     font-size: 35px;
     font-weight: bold;
-    font-family: 'MyCustomFont', sans-serif; /* Применяем подключённый шрифт */
+    font-family: 'txtlogo', sans-serif; /* Применяем подключённый шрифт */
     color: black; /* Делаем текст чёрным */
     letter-spacing: 2px; /* Увеличиваем расстояние между буквами */
     line-height: 1; /* Уменьшаем расстояние между строками */
@@ -105,4 +105,8 @@ footer {
 
 p {
     font-family: 'txtfont', sans-serif; /* Применяем подключённый шрифт */
+}
+
+html {
+    scroll-padding-bottom: 20px; /* небольшая дополнительная прокрутка */
 }
