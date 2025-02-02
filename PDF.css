@@ -1,0 +1,58 @@
+/* Список PDF-документов */
+.pdf-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.pdf-list a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    background: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+}
+
+.pdf-list a:hover {
+    background: #ddd;
+}
+
+/* Просмотр PDF */
+.pdf-viewer {
+    width: 100%;
+    height: 500px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+/* 📱 Адаптация для маленьких экранов */
+@media (max-width: 768px) {
+    .pdf-list {
+        max-width: 100%;
+    }
+
+    .pdf-list a {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .pdf-viewer {
+        height: 400px; /* Уменьшаем высоту просмотра PDF */
+    }
+}
+
+@media (max-width: 480px) {
+    .pdf-list a {
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    .pdf-viewer {
+        height: 300px;
+    }
+}
