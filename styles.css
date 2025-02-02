@@ -8,7 +8,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Подключение шрифтов */
+/* Шрифты */
 @font-face {
     font-family: 'MyCustomFont';
     src: url('assets/front/fontnametag.ttf') format('truetype');
@@ -19,7 +19,6 @@ body {
     src: url('assets/front/txtfont.ttf') format('truetype');
 }
 
-/* ---- HEADER ---- */
 header {
     display: flex;
     justify-content: space-between;
@@ -27,9 +26,10 @@ header {
     background: #e0e0e0;
     color: #000;
     padding: 15px 5%;
-    flex-wrap: wrap;
+    position: relative;
 }
 
+/* Логотип */
 .logo {
     display: flex;
     align-items: center;
@@ -37,83 +37,98 @@ header {
 }
 
 .logo img {
-    height: 150px;
+    height: 100px;
     width: auto;
 }
 
 .logo-text {
-    font-size: 35px;
+    font-size: 28px;
     font-weight: bold;
     font-family: 'MyCustomFont', sans-serif;
     color: black;
     letter-spacing: 2px;
-    line-height: 1;
-    padding-top: 15px;
 }
 
-/* ---- NAVIGATION ---- */
+/* Меню */
 nav {
     position: relative;
 }
 
-/* Обычное меню для ПК */
-nav ul {
+/* ПК-версия меню */
+.menu-list {
     display: flex;
-    gap: 30px;
+    gap: 20px;
     list-style-type: none;
-    padding: 0;
 }
 
-nav li {
+.menu-list li {
     display: inline-block;
 }
 
-nav a {
+.menu-list a {
     color: #000;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     display: flex;
     align-items: center;
 }
 
-nav a img {
-    margin-right: 4px;
-    width: 35px;
-    height: 35px;
+.menu-list img {
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
 }
 
-/* ---- БУРГЕР-МЕНЮ (ТОЛЬКО ДЛЯ МОБИЛОК) ---- */
-#menu-toggle {
-    display: none; /* Скрываем чекбокс */
-}
-
+/* Бургер-меню для мобильных */
 .menu-btn {
-    display: none; /* По умолчанию скрыто (для ПК) */
-    font-size: 30px;
+    display: none;
+    font-size: 32px;
     cursor: pointer;
     user-select: none;
+    position: absolute;
+    right: 5%;
+    top: 15px;
 }
 
-.menu-list {
+/* Скрываем чекбокс */
+#menu-toggle {
+    display: none;
+}
+
+/* Мобильное меню */
+.menu-list-mobile {
     display: none;
     position: absolute;
-    top: 100%;
-    right: 0;
+    top: 60px;
+    right: 5%;
+    width: 200px;
     background: #e0e0e0;
     list-style: none;
     padding: 10px;
-    width: 200px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.menu-list li {
-    padding: 10px 0;
-    text-align: center;
-}
-
-/* Когда чекбокс активен — показываем меню */
-#menu-toggle:checked ~ .menu-list {
+/* Показываем меню при активации чекбокса */
+#menu-toggle:checked ~ nav .menu-list-mobile {
     display: block;
 }
 
-/* ---- F
+/* Адаптивность */
+@media (max-width: 768px) {
+    .menu-list {
+        display: none; /* Скрываем обычное меню */
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .logo img {
+        height: 80px;
+    }
+
+    .logo-text {
+        font-size: 22px;
+    }
+}
