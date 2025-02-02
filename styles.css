@@ -8,30 +8,26 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Подключение шрифта */
+/* Подключение шрифтов */
 @font-face {
     font-family: 'MyCustomFont';
     src: url('assets/front/fontnametag.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
 }
 
 @font-face {
     font-family: 'txtfont';
     src: url('assets/front/txtfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
 }
 
 /* ---- HEADER ---- */
 header {
     display: flex;
-    justify-content: space-between; /* Логотип слева, меню справа */
+    justify-content: space-between;
     align-items: center;
     background: #e0e0e0;
     color: #000;
     padding: 15px 5%;
-    flex-wrap: wrap; /* Позволяет перенос элементов */
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -46,8 +42,6 @@ header {
 }
 
 .logo-text {
-    display: flex;
-    flex-direction: column;
     font-size: 35px;
     font-weight: bold;
     font-family: 'MyCustomFont', sans-serif;
@@ -58,6 +52,11 @@ header {
 }
 
 /* ---- NAVIGATION ---- */
+nav {
+    position: relative;
+}
+
+/* Обычное меню для ПК */
 nav ul {
     display: flex;
     gap: 30px;
@@ -83,44 +82,38 @@ nav a img {
     height: 35px;
 }
 
-/* ---- FOOTER ---- */
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #e0e0e0;
-    color: #000;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: left;
-    align-items: left;
-    font-size: 16px;
+/* ---- БУРГЕР-МЕНЮ (ТОЛЬКО ДЛЯ МОБИЛОК) ---- */
+#menu-toggle {
+    display: none; /* Скрываем чекбокс */
 }
 
-.footer-content {
-    max-width: 900px;
-    width: 100%;
-    text-align: left;
-    font-size: 16px;
+.menu-btn {
+    display: none; /* По умолчанию скрыто (для ПК) */
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none;
 }
 
-/* ---- АДАПТАЦИЯ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ ---- */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column; /* Меняем направление на колонку */
-        align-items: center;
-        text-align: center;
-    }
-
-    .logo {
-        flex-direction: column; /* Логотип и текст становятся в колонку */
-        align-items: center;
-    }
-
-    nav ul {
-        flex-direction: column; /* Меню теперь вертикально */
-        gap: 15px;
-        text-align: center;
-    }
+.menu-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #e0e0e0;
+    list-style: none;
+    padding: 10px;
+    width: 200px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+.menu-list li {
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Когда чекбокс активен — показываем меню */
+#menu-toggle:checked ~ .menu-list {
+    display: block;
+}
+
+/* ---- F
