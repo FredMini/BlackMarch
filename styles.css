@@ -16,6 +16,13 @@ body {
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'txtfont'; /* Название шрифта */
+    src: url('assets/front/txtfont.ttf') format('truetype'); /* Путь к файлу шрифта */
+    font-weight: normal;
+    font-style: normal;
+}
+
 header {
     display: flex;
     justify-content: space-between; /* Логотип слева, меню справа */
@@ -48,6 +55,7 @@ header {
     line-height: 1; /* Уменьшаем расстояние между строками */
     padding-top: 15px; /* Поднимаем текст */
 }
+
 
 nav ul {
     display: flex;
@@ -85,6 +93,7 @@ footer {
     display: flex;
     justify-content: left; /* Центрируем контент */
     align-items: left;
+    font-size: 3;
 }
 
 .footer-content {
@@ -92,4 +101,8 @@ footer {
     width: 100%; /* Пропорциональная ширина */
     text-align: left; /* Центрируем текст */
     font-size: 16px; /* Размер шрифта */
+}
+
+p {
+    font-family: 'txtfont', sans-serif; /* Применяем подключённый шрифт */
 }
